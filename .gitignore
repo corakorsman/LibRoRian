@@ -1,0 +1,7 @@
+.redcar
+.rvmrc
+.bundle
+db/*.sqlite3
+log/*.log
+tmp/
+.sass-cache/
