@@ -1,0 +1,2 @@
+module MusicObjectsHelper
+end

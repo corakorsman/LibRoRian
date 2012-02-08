@@ -5,39 +5,39 @@ Feature: adding music objects
   
   Background:
     Given I am on the homepage
-    When I follow "new music object"  
+    When I follow "New music object"  
   
   
   Scenario: Adding music objects
     And I fill in "Title" with "Bigger Bang"
     And I fill in "Artist" with "Rolling Stones"
-    And I press "create new music object"
-    Then I should see "New music object has been created."
-    And I should be on the music page for "Bigger Bang"
+    And I press "Create music object"
+    Then I should see "Music object has been created."
+ 
     And I should see "Bigger Bang" 
     And I should see "Rolling Stones"
     
   Scenario: Adding music objects without a title
     And I fill in "Artist" with "Rolling Stones"
-    And I press "create new music object"
-    Then I should see "New music object has not been created."
+    And I press "Create music object"
+    Then I should see "Music object has not been created."
     And I should see "Title can't be blank"
     
   Scenario: Adding music objects without a artist
     And I fill in "Title" with "Bigger Bang"
-    And I press "create new music object"
-    Then I should see "New music object has not been created."
+    And I press "Create music object"
+    Then I should see "Music object has not been created."
     And I should see "Artist can't be blank"
     
   Scenario: Adding duplicate music objects
     And I fill in "Title" with "Bigger Bang"
     And I fill in "Artist" with "Rolling Stones"
-    And I press "create new music object"
+    And I press "Create music object"
     And I go to the home page    
-    And I follow "new music object"
+    And I follow "New music object"
     And I fill in "Title" with "Bigger Bang"
     And I fill in "Artist" with "Rolling Stones"
-    And I press "create new music object"    
-    Then I should see "New music object has not been created."
+    And I press "Create music object"    
+    Then I should see "Music object has not been created."
     And I should see "Music object already exist"
     
