@@ -7,8 +7,8 @@ class MusicObjectsController < ApplicationController
 	end
   
 	def create
-		if @music_object = MusicObject.new(params[:music_object])
-	  @music_object.save
+	  @music_object = MusicObject.new(params[:music_object])
+	  if @music_object.save
 		flash[:notice] = "Music object has been created."
 		  redirect_to @music_object
     else

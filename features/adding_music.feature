@@ -13,8 +13,7 @@ Feature: adding music objects
     And I fill in "Artist" with "Rolling Stones"
     And I press "Create music object"
     Then I should see "Music object has been created."
- 
-    And I should see "Bigger Bang" 
+    And I should see "Bigger Bang"
     And I should see "Rolling Stones"
     
   Scenario: Adding music objects without a title
@@ -39,5 +38,5 @@ Feature: adding music objects
     And I fill in "Artist" with "Rolling Stones"
     And I press "Create music object"    
     Then I should see "Music object has not been created."
-    And I should see "Music object already exist"
+    And I should see "has already been taken"
     
