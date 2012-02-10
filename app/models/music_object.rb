@@ -1,9 +1,9 @@
 class MusicObject < ActiveRecord::Base
-  validates :title, :presence => true
-  validates :artist, :presence => true
-  validates :title, :uniqueness => 
-  { :scope => :artist }
-    #:message => "Music Object already exist" } 
+  validates :title, :artist, :presence => true
+  validates :title, :uniqueness => { 
+    :scope => :artist, 
+    :message => "already taken for that artist" 
+  } 
   
 
   # nog validation toevoegen die met case sensitivity te maken heeft. Dus dat hoofdlettergebruik geen 

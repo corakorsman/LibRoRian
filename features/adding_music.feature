@@ -38,5 +38,5 @@ Feature: adding music objects
     And I fill in "Artist" with "Rolling Stones"
     And I press "Create music object"    
     Then I should see "Music object has not been created."
-    And I should see "has already been taken"
+    And I should see "Title already taken for that artist"
     

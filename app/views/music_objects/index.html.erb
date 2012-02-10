@@ -1,1 +1,8 @@
 <%= link_to "New music object", new_music_object_path %>
+
+<h2>Music objects</h2>
+<ul>
+  <% @music_objects.each do |music_object| %>
+  <li><%= link_to music_object.title, music_object %></li>
+  <% end %>
+</ul>
