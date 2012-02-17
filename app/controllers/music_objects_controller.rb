@@ -37,14 +37,13 @@ class MusicObjectsController < ApplicationController
       render :action => "edit"
     end
   end
-    
   
-#  def destroy
-#    @music_object = MusicObject.find(params[:id])
-#    @music-object.destroy
-#    flash[:notice] = "Music object has been deleted."
-#    redirect_to music_object_path
-#  end
+  def destroy
+    @music_object = MusicObject.find(params[:id])
+    @music_object.destroy
+    flash[:notice] = "Music object has been deleted."
+    redirect_to music_objects_path
+  end
   
 
 end

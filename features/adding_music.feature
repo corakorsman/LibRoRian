@@ -1,4 +1,4 @@
-Feature: adding music objects
+Feature: Adding music objects
   In order to have an easy overview of all my music 
   As a user
   I want to add some music to my libRoRy

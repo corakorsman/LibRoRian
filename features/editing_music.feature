@@ -1,4 +1,4 @@
-Feature: Editing Music Objects
+Feature: Editing music objects
   In order to update music object information
   As a user
   I want to be able to do that through an interface
