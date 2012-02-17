@@ -23,5 +23,28 @@ class MusicObjectsController < ApplicationController
 		@music_object = MusicObject.find(params[:id])
 	end
 	
-#end
+  def edit
+    @music_object = MusicObject.find(params[:id])
+  end
+  
+  def update
+    @music_object = MusicObject.find(params[:id])
+    if @music_object.update_attributes(params[:music_object])
+    flash[:notice] = "Music object has been updated."
+    redirect_to @music_object
+    else
+      flash[:alert] = "Music object has not been updated."
+      render :action => "edit"
+    end
+  end
+    
+  
+#  def destroy
+#    @music_object = MusicObject.find(params[:id])
+#    @music-object.destroy
+#    flash[:notice] = "Music object has been deleted."
+#    redirect_to music_object_path
+#  end
+  
+
 end
