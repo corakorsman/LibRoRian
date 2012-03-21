@@ -6,7 +6,7 @@
 <h2>Music</h2>
 <ul>
   <% @music_objects.each do |music_object| %>
-  <li><%= link_to music_object.title, music_object %></li>
+  <li><%= link_to music_object.title, music_object %> - <%= music_object.artist %></li>
   <% end %>
 </ul>
 
