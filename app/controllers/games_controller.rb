@@ -18,10 +18,9 @@ class GamesController < ApplicationController
       render :action => "new"
     end
   end
-
-    
+  
 	def show
-		@game= Game.find(params[:id])
+		@game = Game.find(params[:id])
 	end
 	
   def edit
@@ -29,22 +28,22 @@ class GamesController < ApplicationController
   end
   
   def update
-    @game = Game.find(params[:id])
+      @game = Game.find(params[:id])
     if @game.update_attributes(params[:game])
-    flash[:notice] = "Game has been updated."
-    redirect_to @game
+      flash[:notice] = "Game has been updated."
+      redirect_to @game
   else
       flash[:alert] = "Game has not been updated."
       render :action => "edit"
     end
   end
   
-#  def destroy
-#    @game = Game.find(params[:id])
-#    @game.destroy
-#    flash[:notice] = "Game has been deleted."
-#    redirect_to game_path
-#  end
+  def destroy
+    @game = Game.find(params[:id])
+    @game.destroy
+    flash[:notice] = "Game has been deleted."
+    redirect_to music_objects_path
+  end
 end
 
 
