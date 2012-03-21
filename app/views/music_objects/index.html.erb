@@ -1,20 +1,13 @@
 <h2>LibRoRian</h2>
 
-<%= link_to "New music object", new_music_object_path %><br>
-<%= link_to "New game", new_game_path %>
+<%= link_to "New music object", new_music_object_path %>
 
-  <br></br>
+<br />
 <h2>Music</h2>
 <ul>
   <% @music_objects.each do |music_object| %>
   <li><%= link_to music_object.title, music_object %></li>
   <% end %>
 </ul>
-  <br></br>
 
-<h2>Games</h2>
-<ul>
-  <% @games.each do |game| %>
-  <li><%= link_to game.title, game %></li>
-  <% end %>
-</ul>
+

@@ -5,8 +5,8 @@ Feature: Adding music objects
   
   Background:
     Given I am on the homepage
-    When I follow "New music object"  
-  
+    When I follow "Go to music"
+    And I follow "New music object"
   
   Scenario: Adding music objects
     And I fill in "Title" with "Bigger Bang"
@@ -32,7 +32,8 @@ Feature: Adding music objects
     And I fill in "Title" with "Bigger Bang"
     And I fill in "Artist" with "Rolling Stones"
     And I press "Submit"
-    And I go to the home page    
+    And I go to the home page   
+    And I follow "Go to music"
     And I follow "New music object"
     And I fill in "Title" with "Bigger Bang"
     And I fill in "Artist" with "Rolling Stones"

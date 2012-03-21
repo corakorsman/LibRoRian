@@ -6,7 +6,8 @@ Feature: Deleting music objects
   Scenario: Deleting a music object
     Given there is a music object called "Bigger Bang"
     And I am on the homepage
-    When I follow "Bigger Bang"
+    When I follow "Go to music"
+    And I follow "Bigger Bang"
     And I follow "Delete music object"
     Then I should see "Music object has been deleted"
     Then I should not see "Bigger Bang"

@@ -6,7 +6,8 @@ Feature: Editing music objects
   Background:
     Given there is a music object called "Bigger Bang"
     And I am on the homepage
-    When I follow "Bigger Bang"
+    When I follow "Go to music"
+    And I follow "Bigger Bang"
     And I follow "Edit music object"
  
   Scenario: Updating a music object

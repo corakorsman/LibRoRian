@@ -1,1 +1,11 @@
+<h2>LibRoRian</h2>
+
 <%= link_to "New game", new_game_path %>
+
+<br />
+<h2>Games</h2>
+<ul>
+  <% @games.each do |game| %>
+  <li><%= link_to game.title, game %></li>
+  <% end %>
+</ul>
