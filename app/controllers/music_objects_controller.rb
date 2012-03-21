@@ -1,6 +1,7 @@
 class MusicObjectsController < ApplicationController
   def index
     @music_objects = MusicObject.all
+    @games = Game.all
   end
   
   def new
