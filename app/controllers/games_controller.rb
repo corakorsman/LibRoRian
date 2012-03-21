@@ -42,7 +42,7 @@ class GamesController < ApplicationController
     @game = Game.find(params[:id])
     @game.destroy
     flash[:notice] = "Game has been deleted."
-    redirect_to music_objects_path
+    redirect_to games_path
   end
 end
 
