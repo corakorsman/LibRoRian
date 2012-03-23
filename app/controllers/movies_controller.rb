@@ -23,20 +23,20 @@ class MoviesController < ApplicationController
 		@movie = Movie.find(params[:id])
 	end
 	
-#  def edit
-#    @movie = Movie.find(params[:id])
-#  end
+  def edit
+    @movie = Movie.find(params[:id])
+  end
   
-#  def update
-#    @movie = Movie.find(params[:id])
-#    if @movie.update_attributes(params[:movie])
-#    flash[:notice] = "Movie has been updated."
-#    redirect_to @movie
-#    else
-#      flash[:alert] = "Movie has not been updated."
-#      render :action => "edit"
-#    end
-#  end
+  def update
+    @movie = Movie.find(params[:id])
+    if @movie.update_attributes(params[:movie])
+    flash[:notice] = "Movie has been updated."
+    redirect_to @movie
+  else
+      flash[:alert] = "Movie has not been updated."
+      render :action => "edit"
+    end
+  end
   
 #  def destroy
 #    @movie = Movie.find(params[:id])
