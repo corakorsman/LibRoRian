@@ -1,3 +1,11 @@
 <h2>LibRoRian</h2>
 
 <%= link_to "New movie", new_movie_path %>
+
+<br />
+<h2>Movies</h2>
+<ul>
+  <% @movies.each do |movie| %>
+  <li><%= link_to movie.title, movie %></li>
+  <% end %>
+</ul>
