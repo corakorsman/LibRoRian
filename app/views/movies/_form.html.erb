@@ -1,0 +1,10 @@
+<%= form_for(@movie) do |f| %>
+<%= f.error_messages %>
+ <p>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <%= f.label :medium %>
+  <%= f.text_field :medium %>
+ </p>
+ <%= f.submit "Submit"%>
+<% end %>
