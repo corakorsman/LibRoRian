@@ -6,6 +6,6 @@
 <h2>Movies</h2>
 <ul>
   <% @movies.each do |movie| %>
-  <li><%= link_to movie.title, movie %></li>
+  <li><%= link_to movie.title, movie %> - <%= movie.medium %></li>
   <% end %>
 </ul>
