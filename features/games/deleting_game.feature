@@ -4,7 +4,7 @@ Feature: Deleting games
   I want to make them disappear
   
   Scenario: Deleting a game
-    Given there is a game called "Fear"
+    Given there is a "PS3" game called "Fear"
     And I am on the homepage
     When I follow "Go to games"
     And I follow "Fear"

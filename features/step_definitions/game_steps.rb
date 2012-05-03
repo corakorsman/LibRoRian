@@ -1,5 +1,3 @@
-  Given /^there is a game called "([^\"]*)"$/ do |title|
-    Game.create(:title => "Fear", :system => "PS3")
-  end
-  
-
+Given /^there is a (.*) game called "([^\"]*)"$/ do |system, title|
+  Game.create!(:title => title, :system => system)
+end

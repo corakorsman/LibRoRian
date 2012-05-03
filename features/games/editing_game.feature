@@ -4,7 +4,7 @@ Feature: Editing games
   I want to be able to do that through an interface
   
   Background:
-    Given there is a game called "Fear"
+    Given there is a "PS3" game called "Fear"
     And I am on the homepage
     When I follow "Go to games"
     And I follow "Fear"

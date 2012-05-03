@@ -4,7 +4,7 @@ Feature: Deleting movies
   I want to make them disappear
   
   Scenario: Deleting a movie
-    Given there is a movie called "Watchmen"
+    Given there is a "DVD" movie called "Watchmen"
     And I am on the homepage
     When I follow "Go to movies"
     And I follow "Watchmen"

@@ -4,7 +4,7 @@ Feature: Editing movies
   I want to be able to do that through an interface
   
   Background:
-    Given there is a movie called "Watchmen"
+    Given there is a "DVD" movie called "Watchmen"
     And I am on the homepage
     When I follow "Go to movies"
     And I follow "Watchmen"
