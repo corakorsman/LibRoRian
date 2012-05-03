@@ -1,9 +1,32 @@
-<%= link_to "New movie", new_movie_path %>
+<div class="hero-unit">
+  <h1><i class="icon-film"></i> Movies <i class="icon-film"></i></h1>
+  <p>Collection of movies in da house!</p>
+  <p>
+       <%= link_to "New movie", new_movie_path, :class => 'btn btn-primary btn-large' %>
+  </p>
+</div>
 
-<br />
-<h2>Movies</h2>
-<ul>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Medium</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+<tbody>
   <% @movies.each do |movie| %>
-    <li><%= link_to movie.title, movie %> - <%= movie.medium %></li>
+    <tr>
+    <td><%= link_to movie.title, movie %></td>
+    <td><%= movie.medium %></td>
+    <td><%= link_to "Edit movie", edit_movie_path(movie), :class => 'btn btn-mini' %>
+        <%= link_to "Delete movie", movie, :method => :delete,
+          :confirm => "Are you sure you want to delete this movie?",
+          :class => 'btn btn-mini btn-danger' %>
+    </td>
+  </tr>
   <% end %>
-</ul>
+ </tbody>
+</table>
+
+

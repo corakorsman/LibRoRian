@@ -1,7 +1,13 @@
-<h2><%= @game.title %> - 
+<h2><%= @game.title %> -
     <%= @game.system %> </h2>
     
-<%= link_to "Edit game", edit_game_path(@game) %>
+<%= link_to "Edit game", edit_game_path(@game), :class => 'btn btn-small' %>
 
 <%= link_to "Delete game", @game, :method => :delete,
-  :confirm => "Are you sure you want to delete this game?" %>
+  :confirm => "Are you sure you want to delete this game?", :class => 'btn btn-small btn-danger' %>
+</br>
+</br>
+<%= link_to "Add new game", new_game_path, :class => 'btn btn-primary btn-large' %>
+</br>
+</br>
+  <%= link_to "Back to Games", games_path, :class => 'btn btn-small' %>

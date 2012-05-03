@@ -8,14 +8,54 @@
 </head>
 
 <body>
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+      <%= link_to "LibRoRian", root_path, :class=>"brand" %>
+      <div class="nav-collapse">
+        <ul class="nav">
+          <li><%= link_to "Go to Music", music_objects_path %></li>
+          <li><%= link_to "Go to Games", games_path %></li>
+          <li><%= link_to "Go to movies", movies_path %></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
 
 <% flash.each do |key, value| %>
   <div class='flash' id='<%= key %>'>
     <%= value %>
   </div>
-  <% end %>
+<% end %>
 
-  <%= yield %>
+<div class="container">
+  <div class="span8"><%= yield %></div>
+    <div class="span3">
+      <h2>LibRoRian</h2>
+      <p>A library is an organized collection of books, other printed materials,
+and in some cases special materials such as manuscripts, films and other
+sources of information. Its collections can be of print, audio, or visual
+materials, including maps, prints, documents, microform (e.g. microfilm/microfiche),
+CDs, cassettes, videotapes, DVDs, video games, e-books, audiobooks and many
+other types of electronic resource. The places where this material is stored
+include public libraries, subscription libraries, and private libraries, and
+material can also be in digital form, stored on computers or accessible over
+the Internet. Libraries range in size from a few shelves of books in a small
+organization's library to collections of several million items in the larger
+national and academic libraries.</p>
+    </div>
+  </div>
+</div>
+
+
 
 </body>
 </html>
+
+
