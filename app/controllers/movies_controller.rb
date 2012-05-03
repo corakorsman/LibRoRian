@@ -6,7 +6,7 @@ class MoviesController < ApplicationController
   end
   
   def new
-		@movie = Movie.new
+		@movie = Movie.new(medium: 'DVD')
 	end
 
 	def create

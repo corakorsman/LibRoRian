@@ -6,13 +6,13 @@ class GamesController < ApplicationController
   end
   
   def new
-		@game = Game.new
+		@game = Game.new(system: 'PS3')
 	end
   
 	def create
 	  @game = Game.new(params[:game])
 	  if @game.save
-		flash[:notice] = "Game has been created."
+		  flash[:notice] = "Game has been created."
 		  redirect_to @game
     else
       flash[:alert] = "Game has not been created."
