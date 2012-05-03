@@ -1,10 +1,17 @@
 <%= form_for(@game) do |f| %>
 <%= f.error_messages %>
+
  <p>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
-  <%= f.label :system %>
-  <%= f.text_field :system %>
+  <%= f.label :title %>  <%= f.text_field :title %>
  </p>
- <%= f.submit "Submit"%>
+ <div class="form_row">
+    <label for="system">System:</label>
+    <% [ 'PS3', 'Wii', 'PS2', 'GameCube', 'PC', 'PSP', 'Nintendo 3DS' ].each_with_index do |system| %>
+      <%= f.radio_button :system, system, :checked => (@game.system == system) %>
+      <%= f.label :system, system, :value => system %>
+    <% end %>
+ </div>
+ <p>
+  <%= f.submit "Submit", :class => 'btn btn-small'%>
+ </p>
 <% end %>

@@ -3,8 +3,15 @@
  <p>
   <%= f.label :title %>
   <%= f.text_field :title %>
-  <%= f.label :medium %>
-  <%= f.text_field :medium %>
  </p>
- <%= f.submit "Submit"%>
+ <div class="form_row">
+    <label for="medium">Medium:</label>
+    <% [ 'DVD', 'Blu-ray', 'CD-rom', 'VHS' ].each_with_index do |medium| %>
+      <%= f.radio_button :medium, medium, :checked => (@movie.medium == medium) %>
+      <%= f.label :medium, medium, :value => medium %>
+    <% end %>
+ </div>
+ <p>
+   <%= f.submit "Submit", :class => 'btn btn-small'%>
+ </p>
 <% end %>

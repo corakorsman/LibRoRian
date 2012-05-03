@@ -17,13 +17,7 @@ Feature: Editing games
     And I should see "Fear2"
     And I should see "PS3"
     
-  Scenario: updating a game with invalid attributes for title is bad 
+  Scenario: updating a game with invalid attributes for title is bad
     And I fill in "Title" with ""
     And I press "Submit"
     Then I should see "Game has not been updated"
-  
-  Scenario: updating a game with invalid attributes for artist is bad 
-    And I fill in "System" with ""
-    And I press "Submit"
-    Then I should see "Game has not been updated"
-      

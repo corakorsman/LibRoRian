@@ -17,13 +17,7 @@ Feature: Editing movies
     And I should see "Watchmen2"
     And I should see "DVD"
     
-  Scenario: updating a movie with invalid attributes for title is bad 
+  Scenario: updating a movie with invalid attributes for title is bad
     And I fill in "Title" with ""
     And I press "Submit"
     Then I should see "Movie has not been updated"
-  
-  Scenario: updating a movie with invalid attributes for medium is bad 
-    And I fill in "Medium" with ""
-    And I press "Submit"
-    Then I should see "Movie has not been updated"
-      
