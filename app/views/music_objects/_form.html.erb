@@ -6,7 +6,17 @@
   <%= f.label :artist %>
   <%= f.text_field :artist %>
  </p>
- <%= f.submit "Submit"%>
-<% end %> <p>
+ <div class="form_row">
+    <label for="medium">Medium:</label>
+    <% [ 'CD', 'DVD', 'Blu-ray', 'CD-rom', 'VHS' ].each_with_index do |medium| %>
+      <%= f.radio_button :medium, medium, :checked => (@music_object.medium == medium) %>
+      <%= f.label :medium, medium, :value => medium %>
+    <% end %>
+ </div>
+ <p>
+  <%= f.submit "Submit", :class => 'btn btn-small'%>
+ </p>
+ <p>
   <%= link_to "Back", 'javascript:history.back()', :class => 'btn btn-small' %>
  </p>
+<% end %>

@@ -1,7 +1,7 @@
 class MusicObject < ActiveRecord::Base
-  validates :title, :artist, :presence => true
+  validates :title, :artist, :medium, :presence => true
   validates :title, :uniqueness => {
-    :scope => :artist,
+    :scope => :medium,
     :case_sensitive => false,
     :message => "already taken for that artist"
   }

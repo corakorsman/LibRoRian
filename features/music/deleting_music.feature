@@ -4,7 +4,7 @@ Feature: Deleting music objects
   I want to make them disappear
   
   Scenario: Deleting a music object
-    Given there is a music object called "Bigger Bang"
+    Given there is a CD called "Bigger Bang" by "Rolling Stones"
     And I am on the homepage
     When I follow "Go to music"
     And I follow "Bigger Bang"
