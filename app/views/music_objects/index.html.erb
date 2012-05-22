@@ -12,6 +12,7 @@
       <th>Title</th>
       <th>Artist</th>
       <th>Medium</th>
+      <th>Genre</th>
       <th>Actions<th>
     </tr>
   </thead>
@@ -21,6 +22,7 @@
     <td><%= link_to music_object.title, music_object %></td>
     <td><%= music_object.artist %></td>
     <td><%= music_object.medium %></td>
+    <td><%= music_object.genre %></td>
     <td><%= link_to "Edit music object", edit_music_object_path(music_object), :class => 'btn btn-mini' %>
         <%= link_to "Delete music object", music_object, :method => :delete,
             :confirm => "Are you sure you want to delete this music object?",

@@ -12,6 +12,7 @@ Feature: Adding music objects
     When I fill in "Title" with "Bigger Bang"
     And I fill in "Artist" with "Rolling Stones"
     And I choose "CD"
+    And I select "Rock" from "Genre"
     And I press "Submit"
     Then I should see "Music object has been created."
     And I should see "Bigger Bang"

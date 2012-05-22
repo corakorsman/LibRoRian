@@ -1,5 +1,5 @@
 Feature: Adding movies
-  In order to have an easy overview of all my movies 
+  In order to have an easy overview of all my movies
   As a user
   I want to add some movies to my libRoRy
   
@@ -12,6 +12,7 @@ Feature: Adding movies
   Scenario: Adding movies
     And I fill in "Title" with "Watchmen"
     And I choose "DVD"
+    And I select "Action" from "Genre"
     And I press "Submit"
     Then I should see "Movie has been created."
     And I should see "Watchmen"
@@ -27,7 +28,7 @@ Feature: Adding movies
     And I fill in "Title" with "Watchmen"
     And I choose "DVD"
     And I press "Submit"
-    And I go to the home page    
+    And I go to the home page
     And I follow "Go to movie"
     And I follow "New movie"
     And I fill in "Title" with "Watchmen"

@@ -11,6 +11,7 @@
     <tr>
       <th>Title</th>
       <th>System</th>
+      <th>Genre</th>
       <th>Actions</th>
     </tr>
   </thead>
@@ -19,6 +20,7 @@
     <tr>
     <td><%= link_to game.title, game %></td>
     <td><%= game.system %></td>
+    <td><%= game.genre %></td>
     <td><%= link_to "Edit game", edit_game_path(game), :class => 'btn btn-mini' %>
         <%= link_to "Delete game", game, :method => :delete,
         :confirm => "Are you sure you want to delete this game?", :class => 'btn btn-mini btn-danger' %>

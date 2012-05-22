@@ -1,5 +1,5 @@
 Feature: Adding games
-  In order to have an easy overview of all my games 
+  In order to have an easy overview of all my games
   As a user
   I want to add some games to my libRoRy
   
@@ -12,6 +12,7 @@ Feature: Adding games
   Scenario: Adding games
     When I fill in "Title" with "Fear"
     And I choose "PS3"
+    And I select "Adventure" from "Genre"
     And I press "Submit"
     Then I should see "Game has been created."
     And I should see "Fear"
@@ -27,7 +28,7 @@ Feature: Adding games
     And I fill in "Title" with "Fear"
     And I choose "PS3"
     And I press "Submit"
-    And I go to the home page    
+    And I go to the home page
     And I follow "Go to games"
     And I follow "New game"
     And I fill in "Title" with "Fear"
@@ -35,4 +36,3 @@ Feature: Adding games
     And I press "Submit"
     Then I should see "Game has not been created."
     And I should see "Title already taken for that system."
-    

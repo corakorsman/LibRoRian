@@ -10,6 +10,9 @@
       <%= f.radio_button :system, system, :checked => (@game.system == system) %>
       <%= f.label :system, system, :value => system %>
     <% end %>
+    <br>
+    <%= f.label :genre %>
+    <%= f.select :genre, [['Adventure'],['FPS'],['RPG'],['TPS'],['Sport']] %>
  </div>
  <p>
   <%= f.submit "Submit", :class => 'btn btn-small'%>
@@ -18,3 +21,4 @@
   <%= link_to "Back", 'javascript:history.back()', :class => 'btn btn-small' %>
  </p>
 <% end %>
+
