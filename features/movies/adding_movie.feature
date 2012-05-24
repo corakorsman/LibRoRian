@@ -10,7 +10,7 @@ Feature: Adding movies
   
   
   Scenario: Adding movies
-    And I fill in "Title" with "Watchmen"
+    When I fill in "Title" with "Watchmen"
     And I choose "DVD"
     And I select "Action" from "Genre"
     And I press "Submit"
@@ -37,3 +37,13 @@ Feature: Adding movies
     Then I should see "Movie has not been created."
     And I should see "Title already taken for that medium."
     
+  Scenario: Adding a movie with tags
+    When I fill in "Title" with "Watchmen"
+    And I choose "DVD"
+    And I select "Action" from "Genre"
+    And I fill in "Tags" with "comic"
+    And I press "Submit"
+    Then I should see "Movie has been created."
+    And I should see "Watchmen"
+    And I should see "DVD"
+    And I should see "comic" within "#movie #tags"

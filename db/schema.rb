@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120522101325) do
+ActiveRecord::Schema.define(:version => 20120524080558) do
 
   create_table "games", :force => true do |t|
     t.string   "title"
@@ -19,6 +19,11 @@ ActiveRecord::Schema.define(:version => 20120522101325) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "genre"
+  end
+
+  create_table "library_object_tags", :id => false, :force => true do |t|
+    t.integer "tag_id"
+    t.integer "library_object_id"
   end
 
   create_table "movies", :force => true do |t|
@@ -36,6 +41,10 @@ ActiveRecord::Schema.define(:version => 20120522101325) do
     t.datetime "updated_at"
     t.string   "medium"
     t.string   "genre"
+  end
+
+  create_table "tags", :force => true do |t|
+    t.string "name"
   end
 
 end
