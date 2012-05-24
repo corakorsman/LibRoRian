@@ -1,6 +1,9 @@
+<div id='game'>
 <h2><%= @game.title %> -
     <%= @game.system %> </h2>
-    
+
+<div id='tags'><%= render @game.tags %></div>
+</div>
 <%= link_to "Edit game", edit_game_path(@game), :class => 'btn btn-small' %>
 
 <%= link_to "Delete game", @game, :method => :delete,

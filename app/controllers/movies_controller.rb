@@ -29,6 +29,7 @@ class MoviesController < ApplicationController
   
   def update
     if @movie.update_attributes(params[:movie])
+      @movie.tag!(params[:tags])
       flash[:notice] = "Movie has been updated."
       redirect_to @movie
     else

@@ -46,4 +46,16 @@ Feature: Adding music objects
     And I press "Submit"
     Then I should see "Music object has not been created."
     And I should see "Title already taken for that artist"
+
+  Scenario: Adding a music object with tags
+    When I fill in "Title" with "Bigger Bang"
+    And I fill in "Artist" with "Rolling Stones"
+    And I choose "CD"
+    And I select "Rock" from "Genre"
+    And I fill in "Tags" with "live opname"
+    And I press "Submit"
+    Then I should see "Music object has been created."
+    And I should see "Bigger Bang"
+    And I should see "Rolling Stones"
+    And I should see "live opname" within "#music #tags"
     

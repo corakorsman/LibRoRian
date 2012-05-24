@@ -16,6 +16,12 @@
     <%= f.label :genre %>
     <%= f.select :genre, [['Pop'],['Rock'],['Metal'],['Classic'],['Industrial']] %>
  </div>
+
+<p>
+  <%= label_tag :tags %>
+  <%= text_field_tag :tags, params[:tags] %>
+</p>
+
  <p>
   <%= f.submit "Submit", :class => 'btn btn-small'%>
  </p>

@@ -11,11 +11,15 @@ Feature: Editing movies
     And I follow "Edit movie"
  
   Scenario: Updating a movie
-    And I fill in "Title" with "Watchmen2"
+    When I fill in "Title" with "Watchmen2"
+    And I choose "DVD"
+    And I select "Action" from "Genre"
+    And I fill in "Tags" with "comic"
     And I press "Submit"
     Then I should see "Movie has been updated"
-    And I should see "Watchmen2"
+    And I should see "Watchmen"
     And I should see "DVD"
+    And I should see "comic" within "#movie #tags"
     
   Scenario: updating a movie with invalid attributes for title is bad
     And I fill in "Title" with ""

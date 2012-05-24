@@ -11,11 +11,16 @@ Feature: Editing music objects
     And I follow "Edit music object"
  
   Scenario: Updating a music object
-    And I fill in "Title" with "Bigger Bang beta"
+    When I fill in "Title" with "Bigger Bang"
+    And I fill in "Artist" with "Rolling Stones"
+    And I choose "CD"
+    And I select "Rock" from "Genre"
+    And I fill in "Tags" with "live opname"
     And I press "Submit"
-    Then I should see "Music object has been updated"
-      And I should see "Bigger Bang beta"
+    Then I should see "Music object has been updated."
+    And I should see "Bigger Bang"
     And I should see "Rolling Stones"
+    And I should see "live opname" within "#music #tags"
     
   Scenario: updating a music objec with invalid attributes for title is bad
     And I fill in "Title" with ""

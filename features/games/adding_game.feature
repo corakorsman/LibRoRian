@@ -36,3 +36,14 @@ Feature: Adding games
     And I press "Submit"
     Then I should see "Game has not been created."
     And I should see "Title already taken for that system."
+    
+  Scenario: Adding a game with tags
+    When I fill in "Title" with "Fear"
+    And I choose "PS3"
+    And I select "Adventure" from "Genre"
+    And I fill in "Tags" with "horror"
+    And I press "Submit"
+    Then I should see "Game has been created."
+    And I should see "Fear"
+    And I should see "PS3"
+    And I should see "horror" within "#game #tags"

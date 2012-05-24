@@ -12,6 +12,7 @@ class MusicObjectsController < ApplicationController
 	def create
 	  @music_object = MusicObject.new(params[:music_object])
 	  if @music_object.save
+      @music_object.tag!(params[:tags])
 		  flash[:notice] = "Music object has been created."
 		  redirect_to @music_object
     else
@@ -28,6 +29,7 @@ class MusicObjectsController < ApplicationController
   
   def update
     if @music_object.update_attributes(params[:music_object])
+      @music_object.tag!(params[:tags])
       flash[:notice] = "Music object has been updated."
       redirect_to @music_object
     else

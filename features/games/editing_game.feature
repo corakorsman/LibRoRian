@@ -11,11 +11,15 @@ Feature: Editing games
     And I follow "Edit game"
  
   Scenario: Updating a game
-    And I fill in "Title" with "Fear2"
+    When I fill in "Title" with "Fear"
+    And I choose "PS3"
+    And I select "Adventure" from "Genre"
+    And I fill in "Tags" with "horror"
     And I press "Submit"
     Then I should see "Game has been updated"
-    And I should see "Fear2"
+    And I should see "Fear"
     And I should see "PS3"
+    And I should see "horror" within "#game #tags"
     
   Scenario: updating a game with invalid attributes for title is bad
     And I fill in "Title" with ""

@@ -12,6 +12,7 @@ class GamesController < ApplicationController
 	def create
 	  @game = Game.new(params[:game])
 	  if @game.save
+      @game.tag!(params[:tags])
 		  flash[:notice] = "Game has been created."
 		  redirect_to @game
     else
@@ -28,6 +29,7 @@ class GamesController < ApplicationController
   
   def update
     if @game.update_attributes(params[:game])
+      @game.tag!(params[:tags])
       flash[:notice] = "Game has been updated."
       redirect_to @game
     else
