@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120524080558) do
+ActiveRecord::Schema.define(:version => 20120528190233) do
 
   create_table "games", :force => true do |t|
     t.string   "title"
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(:version => 20120524080558) do
   create_table "library_object_tags", :id => false, :force => true do |t|
     t.integer "tag_id"
     t.integer "library_object_id"
+    t.string  "library_object_type"
   end
 
   create_table "movies", :force => true do |t|

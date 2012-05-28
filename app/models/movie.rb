@@ -5,14 +5,15 @@ class Movie < ActiveRecord::Base
     :case_sensitive => false,
     :message => "already taken for that medium."
   }
-  
-  has_and_belongs_to_many :tags, :join_table => "library_object_tags", :foreign_key => :library_object_id
 
- def tag!(tags)
-  tags = tags.split(",").map do |tag|
-    Tag.find_or_create_by_name(tag)
-  end
+  has_many :library_object_tags, :as => :library_object
+  has_many :tags, :through => :library_object_tags
+
+  def tag!(tags)
+    tags = tags.split(",").map do |tag|
+      Tag.find_or_create_by_name(tag)
+    end
   
-  self.tags << tags
+    self.tags << tags
   end
 end

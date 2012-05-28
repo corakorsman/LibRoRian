@@ -6,7 +6,8 @@ class Game < ActiveRecord::Base
     :message => "already taken for that system."
   }
 
-  has_and_belongs_to_many :tags, :join_table => "library_object_tags", :foreign_key => :library_object_id
+  has_many :library_object_tags, :as => :library_object
+  has_many :tags, :through => :library_object_tags
 
  def tag!(tags)
   tags = tags.split(",").map do |tag|
