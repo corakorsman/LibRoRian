@@ -3,6 +3,10 @@
   <p>Collection of music in da house!</p>
   <p>
     <%= link_to "New music object", new_music_object_path, :class => 'btn btn-primary btn-large' %>
+    <%= form_tag search_music_objects_path, :method => :get do %>
+      <%= text_field_tag "search", params[:search] %>
+      <%= submit_tag "Search" %>
+    <% end %>
   </p>
 </div>
 

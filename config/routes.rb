@@ -1,9 +1,12 @@
 LibRoRian::Application.routes.draw do
   root :to => "music_objects#index"
   
-  resources :music_objects
-  resources :games
-  resources :movies
+  resources :music_objects, :games, :movies do
+    collection do
+      get :search
+    end
+  end
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

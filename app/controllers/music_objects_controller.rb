@@ -44,6 +44,16 @@ class MusicObjectsController < ApplicationController
     redirect_to music_objects_path
   end
   
+  def search
+    if params[:search].present?
+      @music_objects = (MusicObject.search(params[:search])).uniq
+    else
+      @music_objects = MusicObject.all
+    end
+    
+    render :action => "index"
+  end
+  
 private
   def find_music_object
     @music_object = MusicObject.find(params[:id])

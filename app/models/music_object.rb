@@ -6,6 +6,10 @@ class MusicObject < ActiveRecord::Base
     :message => "already taken for that artist"
   }
   
+  searcher do
+    label :tag, :from => :tags, :field => :name
+  end
+  
   has_and_belongs_to_many :tags, :join_table => "library_object_tags", :foreign_key => :library_object_id
 
  def tag!(tags)
