@@ -44,6 +44,15 @@ class MoviesController < ApplicationController
     redirect_to movies_path
   end
   
+  def search
+    10.times do Rails.logger.warn "" end
+    Rails.logger.warn(@movies = Tag.where('name like "?"', params[:search]).map(&:movies))
+    10.times do Rails.logger.warn "" end
+    @movies = Tag.where('name like ?', params[:search]).map(&:movies).flatten
+    
+    render :action => "index"
+  end
+  
 private
   def find_movie
     @movie = Movie.find(params[:id])

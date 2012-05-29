@@ -45,11 +45,10 @@ class MusicObjectsController < ApplicationController
   end
   
   def search
-    if params[:search].present?
-      @music_objects = (MusicObject.search(params[:search])).uniq
-    else
-      @music_objects = MusicObject.all
-    end
+    10.times do Rails.logger.warn "" end
+    Rails.logger.warn(@music_objects = Tag.where('name like "?"', params[:search]).map(&:music_objects))
+    10.times do Rails.logger.warn "" end
+    @music_objects = Tag.where('name like ?', params[:search]).map(&:music_objects).flatten
     
     render :action => "index"
   end
