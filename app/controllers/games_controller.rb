@@ -44,6 +44,15 @@ class GamesController < ApplicationController
     redirect_to games_path
   end
   
+  def search
+    10.times do Rails.logger.warn "" end
+    Rails.logger.warn(@movies = Tag.where('name like "?"', params[:search]).map(&:games))
+    10.times do Rails.logger.warn "" end
+    @games = Tag.where('name like ?', params[:search]).map(&:games).flatten
+    
+    render :action => "index"
+  end
+  
 private
   def find_game
     @game = Game.find(params[:id])

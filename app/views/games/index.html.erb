@@ -2,7 +2,11 @@
  <h1><i class=" icon-screenshot"></i> Games <i class=" icon-screenshot"></i></h1>
   <p>Collection of games in da house!</p>
   <p>
-       <%= link_to "New game", new_game_path, :class => 'btn btn-primary btn-large' %>
+    <%= link_to "New game", new_game_path, :class => 'btn btn-primary btn-large' %>
+    <%= form_tag search_games_path, :method => :get do %>
+      <%= text_field_tag "search", params[:search] %>
+      <%= submit_tag "Search" %>
+    <% end %>
   </p>
 </div>
 

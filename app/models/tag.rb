@@ -8,4 +8,8 @@ class Tag < ActiveRecord::Base
            :through => :library_object_tags,
            :source => :library_object,
            :source_type => 'Movie'
+  has_many :games,
+           :through => :library_object_tags,
+           :source => :library_object,
+           :source_type => 'Game'
 end
