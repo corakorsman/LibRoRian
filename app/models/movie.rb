@@ -11,7 +11,7 @@ class Movie < ActiveRecord::Base
 
   def tag!(tags)
     tags = tags.split(",").map do |tag|
-      Tag.find_or_create_by_name(tag)
+      Tag.find_or_create_by_name(tag.strip)
     end
   
     self.tags << tags
