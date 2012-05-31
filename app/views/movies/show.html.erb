@@ -1,9 +1,12 @@
 <div id='movie'>
-<h2><%= @movie.title %> -
-    <%= @movie.medium%> </h2>
+  <h2><%= @movie.title %> -
+      <%= @movie.medium%> </h2>
 
-<div id='tags'><%= render @movie.library_object_tags %></div>
+  <div id='tags'>
+  <p>Tags:<%= render @movie.library_object_tags %></p>
+  </div>
 </div>
+
 <%= link_to "Edit movie", edit_movie_path(@movie), :class => 'btn btn-small' %>
 
 <%= link_to "Delete movie", @movie, :method => :delete,

@@ -1,18 +1,20 @@
 <div id='music'>
-<h2><%= @music_object.title %> -
-    <%= @music_object.artist %> -
-    <%= @music_object.medium %></h2>
+  <h2><%= @music_object.title %> -
+      <%= @music_object.artist %> -
+      <%= @music_object.medium %></h2>
 
-<div id='tags'><%= render @music_object.library_object_tags %></div>
+  <div id='tags'>
+    <p>Tags:<%= render @music_object.library_object_tags %></p>
+  </div>
 </div>
     
-  <%= link_to "Edit music object", edit_music_object_path(@music_object), :class => 'btn btn-small' %>
+<%= link_to "Edit music object", edit_music_object_path(@music_object), :class => 'btn btn-small' %>
 
-  <%= link_to "Delete music object", @music_object, :method => :delete,
+<%= link_to "Delete music object", @music_object, :method => :delete,
     :confirm => "Are you sure you want to delete this music object?", :class => 'btn btn-small btn-danger' %>
 </br>
 </br>
-  <%= link_to "Add new music object", new_music_object_path, :class => 'btn btn-primary btn-large' %>
+<%= link_to "Add new music object", new_music_object_path, :class => 'btn btn-primary btn-large' %>
 </br>
 </br>
-  <%= link_to "Back to Music", music_objects_path, :class => 'btn btn-small' %>
+<%= link_to "Back to Music", music_objects_path, :class => 'btn btn-small' %>
