@@ -1,0 +1,7 @@
+<span class ='tag' id='tag-<%= library_object_tag.tag.name.parameterize %>'>
+  <%= library_object_tag.tag.name %>
+  <%= link_to "x", remove_tag_path(library_object_tag.library_object_type, library_object_tag.library_object_id, library_object_tag.tag.name),
+             :remote => true,
+             :method => :delete,
+             :id => "delete-#{library_object_tag.tag.name.parameterize}" %>
+</span>

@@ -3,7 +3,7 @@
     <%= @music_object.artist %> -
     <%= @music_object.medium %></h2>
 
-<div id='tags'><%= render @music_object.tags %></div>
+<div id='tags'><%= render @music_object.library_object_tags %></div>
 </div>
     
   <%= link_to "Edit music object", edit_music_object_path(@music_object), :class => 'btn btn-small' %>

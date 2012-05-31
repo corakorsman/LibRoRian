@@ -2,7 +2,7 @@
 <h2><%= @game.title %> -
     <%= @game.system %> </h2>
 
-<div id='tags'><%= render @game.tags %></div>
+<div id='tags'><%= render @game.library_object_tags %></div>
 </div>
 <%= link_to "Edit game", edit_game_path(@game), :class => 'btn btn-small' %>
 

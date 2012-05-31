@@ -2,7 +2,7 @@
 <h2><%= @movie.title %> -
     <%= @movie.medium%> </h2>
 
-<div id='tags'><%= render @movie.tags %></div>
+<div id='tags'><%= render @movie.library_object_tags %></div>
 </div>
 <%= link_to "Edit movie", edit_movie_path(@movie), :class => 'btn btn-small' %>
 

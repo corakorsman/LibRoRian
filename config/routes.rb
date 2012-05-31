@@ -7,6 +7,11 @@ LibRoRian::Application.routes.draw do
     end
   end
 
+  delete ':object_class/:id/tag/:tag/remove' => 'tags#remove', :as => 'remove_tag'
+#  resources :tags do
+#    delete :remove
+#  end
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
