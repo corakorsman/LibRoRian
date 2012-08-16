@@ -8,7 +8,7 @@ Feature: Searching
     And the CD called "Bigger Bang" has the tags "live, rock 'n roll"
     And there is a CD called "One" by "U2"
     And I am on the homepage
-    When I follow "Go to music"
+    When I follow "Go to Music"
     Then I should see "Bigger Bang"
     And I should see "One"
     

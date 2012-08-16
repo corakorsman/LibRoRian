@@ -8,7 +8,7 @@ Feature: Searching
     And the PS3 game called "Fear" has the tags "horror"
     And there is a "PS3" game called "Nier"
     And I am on the homepage
-    When I follow "Go to games"
+    When I follow "Go to Games"
     Then I should see "Fear"
     And I should see "Nier"
     

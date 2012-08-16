@@ -3,16 +3,119 @@
 <head>
   <title>LibRoRian</title>
   <link href="/assets/application.css?body=1" media="screen" rel="stylesheet" type="text/css" />
-  <link href="/assets/bootstrap_and_overrides.css?body=1" media="screen" rel="stylesheet" type="text/css" />
-  <link href="/assets/games.css?body=1" media="screen" rel="stylesheet" type="text/css" />
-  <link href="/assets/movies.css?body=1" media="screen" rel="stylesheet" type="text/css" />
-  <link href="/assets/objects.css?body=1" media="screen" rel="stylesheet" type="text/css" />
+<link href="/assets/bootstrap_and_overrides.css?body=1" media="screen" rel="stylesheet" type="text/css" />
+<link href="/assets/games.css?body=1" media="screen" rel="stylesheet" type="text/css" />
+<link href="/assets/movies.css?body=1" media="screen" rel="stylesheet" type="text/css" />
+<link href="/assets/objects.css?body=1" media="screen" rel="stylesheet" type="text/css" />
+<link href="/assets/tags.css?body=1" media="screen" rel="stylesheet" type="text/css" />
+  <script src="/assets/jquery.js?body=1" type="text/javascript"></script>
+<script src="/assets/jquery_ujs.js?body=1" type="text/javascript"></script>
+<script src="/assets/twitter/bootstrap/bootstrap-transition.js?body=1" type="text/javascript"></script>
+<script src="/assets/twitter/bootstrap/bootstrap-alert.js?body=1" type="text/javascript"></script>
+<script src="/assets/twitter/bootstrap/bootstrap-modal.js?body=1" type="text/javascript"></script>
+<script src="/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" type="text/javascript"></script>
+<script src="/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" type="text/javascript"></script>
+<script src="/assets/twitter/bootstrap/bootstrap-tab.js?body=1" type="text/javascript"></script>
+<script src="/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" type="text/javascript"></script>
+<script src="/assets/twitter/bootstrap/bootstrap-popover.js?body=1" type="text/javascript"></script>
+<script src="/assets/twitter/bootstrap/bootstrap-button.js?body=1" type="text/javascript"></script>
+<script src="/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" type="text/javascript"></script>
+<script src="/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" type="text/javascript"></script>
+<script src="/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" type="text/javascript"></script>
+<script src="/assets/twitter/bootstrap.js?body=1" type="text/javascript"></script>
+<script src="/assets/bootstrap.js?body=1" type="text/javascript"></script>
+<script src="/assets/games.js?body=1" type="text/javascript"></script>
+<script src="/assets/movies.js?body=1" type="text/javascript"></script>
+<script src="/assets/objects.js?body=1" type="text/javascript"></script>
+<script src="/assets/tags.js?body=1" type="text/javascript"></script>
+<script src="/assets/application.js?body=1" type="text/javascript"></script>
+  <meta content="authenticity_token" name="csrf-param" />
+<meta content="J3LaOO2HWtywM+IijVN7d69H9HCy9vmOJVNdTh9qTD4=" name="csrf-token" />
 </head>
- 
+
 <body>
-  <a href="/"><h1>LibRoRian</h1></a>
-  <a href="/music_objects">Go to music</a> |
-  <a href="/games">Go to games</a> |
-  <a href="/movies">Go to movies</a>
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+      <a href="/" class="brand">LibRoRian</a>
+      <div class="nav-collapse">
+        <ul class="nav">
+          <li><a href="/music_objects">Go to Music</a></li>
+          <li><a href="/games">Go to Games</a></li>
+          <li><a href="/movies">Go to Movies</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+ 
+<div class="container">
+  <div class="span3">
+    <div class="hero-unit">
+  <h1><i class="icon-music"></i> Music</h1>
+  <br>
+  <p>
+    <a href="/music_objects/new" class="btn btn-primary btn-large">New music object</a>
+    <form accept-charset="UTF-8" action="/music_objects/search" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" />
+  </div>
+    <input id="search" name="search" type="text" />
+    <input name="commit" type="submit" value="Search tag" />
+  </form>
+  </div>
+</div>
+
+<div class="container">
+  <div class="span3"><div class="hero-unit">
+ <h1><i class=" icon-screenshot"></i> Games</h1>
+  <br>
+  <p>
+    <a href="/games/new" class="btn btn-primary btn-large">New game</a>
+    <form accept-charset="UTF-8" action="/games/search" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" />
+  </div>
+    <input id="search" name="search" type="text" />
+    <input name="commit" type="submit" value="Search tag" />
+  </form>
+  </div>
+</div>
+
+<div class="container">
+  <div class="span3"><div class="hero-unit">
+  <h1><i class="icon-film"></i> Movies</h1>
+  <br>
+  <p>
+    <a href="/movies/new" class="btn btn-primary btn-large">New movie</a>
+    <form accept-charset="UTF-8" action="/movies/search" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" />
+  </div>
+    <input id="search" name="search" type="text" />
+    <input name="commit" type="submit" value="Search tag" />
+  </form>
+  </div>
+</div>
+
+<div class="container">
+  <div class="span9"></div>
+    <div class="span9">
+      <h2>LibRoRian</h2>
+      <p>A library is an organized collection of books, other printed materials,
+and in some cases special materials such as manuscripts, films and other
+sources of information. Its collections can be of print, audio, or visual
+materials, including maps, prints, documents, microform (e.g. microfilm/microfiche),
+CDs, cassettes, videotapes, DVDs, video games, e-books, audiobooks and many
+other types of electronic resource. The places where this material is stored
+include public libraries, subscription libraries, and private libraries, and
+material can also be in digital form, stored on computers or accessible over
+the Internet. Libraries range in size from a few shelves of books in a small
+organization's library to collections of several million items in the larger
+national and academic libraries.</p>
+    </div>
+  </div>
+
 </body>
 </html>
+ 
+ 

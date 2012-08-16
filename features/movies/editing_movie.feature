@@ -6,7 +6,7 @@ Feature: Editing movies
   Background:
     Given there is a "DVD" movie called "Watchmen"
     And I am on the homepage
-    When I follow "Go to movies"
+    When I follow "Go to Movies"
     And I follow "Watchmen"
     And I follow "Edit movie"
  

@@ -5,7 +5,7 @@ Feature: Adding movies
   
   Background:
     Given I am on the homepage
-    When I follow "Go to movies"
+    When I follow "Go to Movies"
     And I follow "New movie"
   
   
@@ -29,7 +29,7 @@ Feature: Adding movies
     And I choose "DVD"
     And I press "Submit"
     And I go to the home page
-    And I follow "Go to movie"
+    And I follow "Go to Movies"
     And I follow "New movie"
     And I fill in "Title" with "Watchmen"
     And I choose "DVD"

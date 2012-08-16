@@ -6,7 +6,7 @@ Feature: Viewing games
   Scenario: Listing all games
     Given there is a "PS3" game called "Fear"
     And I am on the homepage
-    When I follow "Go to games"
+    When I follow "Go to Games"
     And I follow "Fear"
     Then I should see "Fear"
     And I should see "PS3"

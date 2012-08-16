@@ -6,7 +6,7 @@ Feature: Editing games
   Background:
     Given there is a "PS3" game called "Fear"
     And I am on the homepage
-    When I follow "Go to games"
+    When I follow "Go to Games"
     And I follow "Fear"
     And I follow "Edit game"
  

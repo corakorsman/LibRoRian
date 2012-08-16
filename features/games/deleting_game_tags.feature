@@ -7,7 +7,7 @@ Feature: Deleting tags
     Given there is a "PS3" game called "Fear"
     And the PS3 game called "Fear" has the tags "horror"
     Given I am on the homepage
-    And I follow "Go to games"
+    And I follow "Go to Games"
     And I follow "Fear"
     Then I should see "Fear"
     And I should see "horror"

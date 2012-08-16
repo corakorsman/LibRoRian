@@ -6,7 +6,7 @@ Feature: Editing music objects
   Background:
     Given there is a CD called "Bigger Bang" by "Rolling Stones"
     And I am on the homepage
-    When I follow "Go to music"
+    When I follow "Go to Music"
     And I follow "Bigger Bang"
     And I follow "Edit music object"
  

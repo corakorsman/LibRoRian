@@ -7,7 +7,7 @@ Feature: Deleting tags
     Given there is a CD called "Bigger Bang" by "Rolling Stones"
     And the CD called "Bigger Bang" has the tags "live"
     Given I am on the homepage
-    And I follow "Go to music"
+    And I follow "Go to Music"
     And I follow "Bigger Bang"
     Then I should see "Bigger Bang"
     And I should see "live"

@@ -7,7 +7,7 @@ Feature: Deleting tags
     Given there is a "DVD" movie called "Watchmen"
     And the DVD movie called "Watchmen" has the tags "comic"
     Given I am on the homepage
-    And I follow "Go to movies"
+    And I follow "Go to Movies"
     And I follow "Watchmen"
     Then I should see "Watchmen"
     And I should see "comic"

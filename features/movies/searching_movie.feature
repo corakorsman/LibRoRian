@@ -8,7 +8,7 @@ Feature: Searching
     And the DVD movie called "Watchmen" has the tags "comic"
     And there is a "DVD" movie called "Cloverfield"
     And I am on the homepage
-    When I follow "Go to movies"
+    When I follow "Go to Movies"
     Then I should see "Watchmen"
     And I should see "Cloverfield"
     

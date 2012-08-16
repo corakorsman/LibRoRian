@@ -5,7 +5,7 @@ Feature: Adding games
   
   Background:
     Given I am on the homepage
-    When I follow "Go to games"
+    And I follow "Go to Games"
     And I follow "New game"
   
   
@@ -29,7 +29,7 @@ Feature: Adding games
     And I choose "PS3"
     And I press "Submit"
     And I go to the home page
-    And I follow "Go to games"
+    And I follow "Go to Games"
     And I follow "New game"
     And I fill in "Title" with "Fear"
     And I choose "PS3"
